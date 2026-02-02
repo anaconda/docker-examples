@@ -21,7 +21,7 @@ RUN --mount=type=secret,id=ANACONDA_AUTH_API_KEY \
   --file environment.yml
 
 # Stage 2: Starting from a slim debian image, copy the conda environment, app code, and run
-FROM debian:13.2-slim@sha256:e711a7b30ec1261130d0a121050b4ed81d7fb28aeabcf4ea0c7876d4e9f5aca2
+FROM debian:13.2-slim@sha256:4bcb9db66237237d03b55b969271728dd3d955eaaa254b9db8a3db94550b1885
 
 # Copy in the prepared conda environment
 COPY --from=builder /env /env
