@@ -1,5 +1,5 @@
 # Stage 1: Use the miniconda base image to create a new conda environment for our runtime
-FROM continuumio/miniconda3:v25.11.1-1@sha256:5df7c31c16e90e4ea370836770feed507a1cf51c6e8aad835c65fb26b9eca941 AS builder
+FROM continuumio/miniconda3:26.7.1-1@sha256:eca594d684f495c1a02beff33a9fab53aec8c5830eaf431bb149912dc6c9e4c1 AS builder
 
 # Install a test plugin which will inject HTTP headers to trigger server-side behavior
 COPY ./testing/conda-test-header-plugin ./conda-test-header-plugin
