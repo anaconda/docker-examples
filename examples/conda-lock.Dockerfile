@@ -22,7 +22,7 @@ RUN --mount=type=secret,id=ANACONDA_AUTH_API_KEY \
   conda lock install --prefix /env
 
 # Stage 2: Starting from a slim debian image, copy the conda environment, app code, and run
-FROM debian:13.3-slim@sha256:77ba0164de17b88dd0bf6cdc8f65569e6e5fa6cd256562998b62553134a00ef0
+FROM debian:13.7-slim@sha256:a29215f6a35e51e22adffa17f89e9d2ef06214e64a2bad10d765c46aea49f11f
 
 # Copy in the prepared conda environment
 COPY --from=builder /env /env
